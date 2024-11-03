@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -12,19 +12,32 @@ import premium5 from '../images/premium-5.png'
 import standard1 from '../images/standard-1.png'
 import standard2 from '../images/standard-2.png'
 import standard5 from '../images/standard-5.png'
-import reserved1 from '../images/reserved-1.png'
+import reserved1 from '../images/reserved-1.png' /* Trop petit */
 import reserved2 from '../images/reserved-2.png'
 import reserved3 from '../images/reserved-3.png'
 
 const CarouselPremium = () => {
   const [isSwipeVisible, setSwipeVisible] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [filter, setFilter] = useState("Tous"); // State pour gérer le filtre sélectionné
+  const [filter, setFilter] = useState("Tous");
+
+  // Fonction pour vérifier la taille de l'écran
+  useEffect(() => {
+    const handleResize = () => {
+      setSwipeVisible(window.innerWidth <= 800); // Affiche l'animation seulement si la largeur est de 800px ou moins
+    };
+    
+    handleResize(); // Vérifie la taille initiale de l'écran
+    window.addEventListener("resize", handleResize); // Ajoute un écouteur de redimensionnement
+
+    // Nettoie l'écouteur lorsque le composant est démonté
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const designs = [
     { id: 1, image: premium1, demoLink: "/#/demo/premium-1", reserveLink: "https://book.stripe.com/6oEg2faDFcbs2fScMQ", isReserved: false, category: "Premium" },
     { id: 2, image: premium2, demoLink: "/#/demo/premium-2", reserveLink: "https://book.stripe.com/dR603h7rtb7o2fS3ch", isReserved: false, category: "Premium" },
-    { id: 3, image: reserved1, demoLink: "#", reserveLink: "#", isReserved: true, category: "Premium" },
+    { id: 3, image: reserved3, demoLink: "#", reserveLink: "#", isReserved: true, category: "Premium" },
     { id: 4, image: premium4, demoLink: "/#/demo/premium-4", reserveLink: "https://book.stripe.com/dR603h7rtb7o2fS3ch", isReserved: false, category: "Premium" },
     { id: 5, image: premium5, demoLink: "/#/demo/premium-5", reserveLink: "https://book.stripe.com/28ocQ3bHJ3EW3jW5kq", isReserved: false, category: "Premium" },
     { id: 6, image: standard1, demoLink: "/#/demo/standard-1", reserveLink: "", isReserved: false, category: "Standard" },
@@ -56,10 +69,9 @@ const CarouselPremium = () => {
   };
 
   const handleHideSwipe = () => {
-    setSwipeVisible(false); // Masquer swipe-container lorsqu'on clique ou fait défiler
+    setSwipeVisible(false);
   };
 
-  // Fonction pour filtrer les designs
   const filteredDesigns = designs.filter((design) => {
     if (filter === "Tous") return true;
     return design.category === filter;
@@ -68,14 +80,13 @@ const CarouselPremium = () => {
   return (
     <section id="design">
       <div className="carousel-section premium">
-        {/* swipe-container, visible uniquement si isSwipeVisible est vrai */}
         {isSwipeVisible && (
           <div 
             className="swipe-container" 
             onClick={handleHideSwipe}
-            onScroll={handleHideSwipe} // Pour détecter le scroll
-            onTouchStart={handleHideSwipe} // Pour détecter le swipe
-            onTouchMove={handleHideSwipe} // Pour détecter le mouvement tactile
+            onScroll={handleHideSwipe}
+            onTouchStart={handleHideSwipe}
+            onTouchMove={handleHideSwipe}
           >
             <SwipeAnimation />
           </div>
@@ -85,7 +96,6 @@ const CarouselPremium = () => {
           <h2 className="carousel-title premium-title">Choisissez votre design</h2>
           <p className="premium-subtitle">Chacun de nos design est unique, chaque section est personnalisable afin de représenter au mieux vos valeurs et votre image de marque.</p>
           
-          {/* Boutons de filtre */}
           <div className="filter-buttons">
             <button onClick={() => setFilter("Tous")} className={filter === "Tous" ? "active" : ""}>Tous </button>
             <div className="separator">|</div>

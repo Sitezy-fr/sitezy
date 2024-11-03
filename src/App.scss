@@ -6,6 +6,9 @@
     background-position: top left;
     background-size: cover;
     font-family: 'Poppins', sans-serif;
+    text-wrap: balance;
+    padding: 0;
+    margin: 0;
 
     /* NAVBAR SECTION */
     .navbar {
@@ -218,7 +221,6 @@
     
             h1 {
                 font-size: 70px;
-                font-family: 'Arimo', sans-serif;
                 font-weight: bolder;
                 text-wrap: unset;
                 margin: 40px 0 20px;
@@ -961,6 +963,14 @@
         margin: auto;
         }
         #design .swipe-container {
+            background: linear-gradient(90deg, #0000 5%, rgba(0, 0, 0, .122), #0000 95%);
+            display: flex;
+            filter: drop-shadow(2px 4px 6px black);
+            justify-content: center;
+            position: absolute;
+            transform: translateY(250%);
+            width: 80%;
+            z-index: 10;
             top: 25%;
             left: 10%;
         }
@@ -1402,6 +1412,7 @@
                 cursor: pointer;
                 background-color: transparent;
                 border: none;
+                padding: 0;
             }
 
         }
@@ -1699,6 +1710,7 @@
               margin: 0 10px;
               border-radius: 31px;
               width: 330px;
+              height: 330px;
               
               .team-image {
                 width: 120px;

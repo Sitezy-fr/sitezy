@@ -64,7 +64,7 @@ const Footer = () => {
             icon: 'success',
             title: 'Message envoyé !',
             text: 'Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.',
-            confirmButtonColor: '#e32c39',
+            confirmButtonColor: '#8bc34a',
             confirmButtonText: 'OK'
           });
       }, (error) => {
@@ -72,7 +72,7 @@ const Footer = () => {
           Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Une erreur est survenue lors de l\'envoi de votre message. Veuillez réessayer plus tard ou nous contacter directement via contact@rubis.design',
+            text: 'Une erreur est survenue lors de l\'envoi de votre message. Veuillez réessayer plus tard ou nous contacter directement via contact@sitezy.fr',
             confirmButtonColor: '#e32c39',
             confirmButtonText: 'Réessayer'
           });
