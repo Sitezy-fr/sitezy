@@ -1,10 +1,44 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { FilterContext } from './FilterContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons'; 
-import couronne from '../images/couronne.png'
+import couronne from '../images/couronne.png';
 
 const Pricing = () => {
-    return (
+  const { setFilter } = useContext(FilterContext);
+
+  // Modifiez `scrollToDesignSection` pour accepter un argument `filterType`
+  const scrollToDesignSection = (filterType) => {
+    setFilter(filterType); // Définit le filtre sur "Standard" ou "Premium"
+    
+    const designSection = document.getElementById("design");
+    if (designSection) {
+      const navbarHeight = 90; // Ajustez en fonction de la hauteur de la navbar
+      const sectionPosition = designSection.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = sectionPosition - navbarHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+    const scrollToContact = () => {
+      const presentationSection = document.getElementById('contact');
+      if (presentationSection) {
+          const navbarHeight = 20; // Ajustez cette valeur si la navbar a une hauteur différente
+          const sectionPosition = presentationSection.getBoundingClientRect().top + window.scrollY;
+          const offsetPosition = sectionPosition - navbarHeight;
+
+          window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth',
+          });
+      }
+  };
+
+  return (
 
     <section id='pricing'>
           <div class="details">
@@ -57,7 +91,7 @@ const Pricing = () => {
                 </div>
               </div>
               <div class="button">
-                <button>Découvrir</button>
+                <button onClick={() => scrollToDesignSection("Standard")}>Découvrir</button>
               </div>
             </div>
 
@@ -108,7 +142,7 @@ const Pricing = () => {
                 </div>
               </div>
               <div class="button">
-                <button>Découvrir</button>
+                <button onClick={() => scrollToDesignSection("Premium")}>Découvrir</button>
               </div>
             </div>
 
@@ -157,7 +191,7 @@ const Pricing = () => {
                 </div>
               </div>
               <div class="button">
-                <button>Découvrir</button>
+                <button onClick={scrollToContact}>Prendre contact</button>
               </div>
             </div>
           </div>

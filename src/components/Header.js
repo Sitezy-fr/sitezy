@@ -30,8 +30,23 @@ const Header = () => {
         }
     }, [isDesktop]); // Rejouer la vidéo si l'état desktop change
 
+    // Fonction pour faire défiler jusqu'à la section "presentation"
+    const scrollToPresentation = () => {
+        const presentationSection = document.getElementById('reviews-summary');
+        if (presentationSection) {
+            const navbarHeight = 90; // Ajustez cette valeur si la navbar a une hauteur différente
+            const sectionPosition = presentationSection.getBoundingClientRect().top + window.scrollY;
+            const offsetPosition = sectionPosition - navbarHeight;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth',
+            });
+        }
+    };
+
     return (
-        <header className="header">
+        <header id='header' className="header">
             <div className="header__content">
                 <div className="header__text">
                     <div className="tag">
@@ -64,7 +79,7 @@ const Header = () => {
                     )}
                 </div>
             </div>
-            <div className="header__chevron">
+            <div className="header__chevron" onClick={scrollToPresentation} style={{ cursor: 'pointer' }}>
                 <FontAwesomeIcon icon={faChevronDown} />
             </div>
         </header>

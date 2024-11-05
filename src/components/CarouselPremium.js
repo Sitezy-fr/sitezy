@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { FilterContext } from './FilterContext';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -15,11 +16,13 @@ import standard5 from '../images/standard-5.png'
 import reserved1 from '../images/reserved-1.png' /* Trop petit */
 import reserved2 from '../images/reserved-2.png'
 import reserved3 from '../images/reserved-3.png'
+import couronne from '../images/couronne.png'
 
 const CarouselPremium = () => {
+  const { filter, setFilter } = useContext(FilterContext);
   const [isSwipeVisible, setSwipeVisible] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [filter, setFilter] = useState("Tous");
+
 
   // Fonction pour vérifier la taille de l'écran
   useEffect(() => {
@@ -35,16 +38,16 @@ const CarouselPremium = () => {
   }, []);
 
   const designs = [
-    { id: 1, image: premium1, demoLink: "/#/demo/premium-1", reserveLink: "https://book.stripe.com/6oEg2faDFcbs2fScMQ", isReserved: false, category: "Premium" },
-    { id: 2, image: premium2, demoLink: "/#/demo/premium-2", reserveLink: "https://book.stripe.com/dR603h7rtb7o2fS3ch", isReserved: false, category: "Premium" },
-    { id: 3, image: reserved3, demoLink: "#", reserveLink: "#", isReserved: true, category: "Premium" },
-    { id: 4, image: premium4, demoLink: "/#/demo/premium-4", reserveLink: "https://book.stripe.com/dR603h7rtb7o2fS3ch", isReserved: false, category: "Premium" },
-    { id: 5, image: premium5, demoLink: "/#/demo/premium-5", reserveLink: "https://book.stripe.com/28ocQ3bHJ3EW3jW5kq", isReserved: false, category: "Premium" },
-    { id: 6, image: standard1, demoLink: "/#/demo/standard-1", reserveLink: "", isReserved: false, category: "Standard" },
-    { id: 7, image: standard2, demoLink: "/#/demo/standard-2", reserveLink: "#", isReserved: false, category: "Standard" },
-    { id: 8, image: reserved2, demoLink: "#", reserveLink: "#", isReserved: true, category: "Standard" },
-    { id: 9, image: reserved3, demoLink: "#", reserveLink: "#", isReserved: true, category: "Standard" },
-    { id: 10, image: standard5, demoLink: "/#/demo/standard-5", reserveLink: "#", isReserved: false, category: "Standard" },
+    { id: 1, image: premium4, demoLink: "/#/demo/premium-4", reserveLink: "https://book.stripe.com/bIY2aL8e8bPQ1z2cMM", isReserved: false, category: "Premium" },
+    { id: 2, image: premium2, demoLink: "/#/demo/premium-2", reserveLink: "https://book.stripe.com/fZe2aL3XS7zA91u5kl", isReserved: false, category: "Premium" },
+    { id: 3, image: reserved3, demoLink: "#", reserveLink: "#", isReserved: true, category: "Standard" },
+    { id: 4, image: premium5, demoLink: "/#/demo/premium-5", reserveLink: "https://book.stripe.com/7sIdTt7a4f227Xq146", isReserved: false, category: "Premium" },
+    { id: 5, image: standard2, demoLink: "/#/demo/standard-2", reserveLink: "https://book.stripe.com/14kcPpdys9HI6TmeUX", isReserved: false, category: "Standard" },
+    { id: 6, image: premium1, demoLink: "/#/demo/premium-1", reserveLink: "https://book.stripe.com/14keXx660f225Pi3cg", isReserved: false, category: "Premium" },
+    { id: 7, image: standard5, demoLink: "/#/demo/standard-5", reserveLink: "https://book.stripe.com/7sIbLldys5rs91udQV", isReserved: false, category: "Standard" },
+    { id: 8, image: reserved2, demoLink: "#", reserveLink: "#", isReserved: true, category: "Premium" },
+    { id: 9, image: reserved3, demoLink: "#", reserveLink: "#", isReserved: true, category: "Premium" },
+    { id: 10, image: standard1, demoLink: "/#/demo/standard-1", reserveLink: "https://book.stripe.com/28o02DbqkbPQ0uY28e", isReserved: false, category: "Standard" },
   ];
 
   const settings = {
@@ -99,9 +102,10 @@ const CarouselPremium = () => {
           <div className="filter-buttons">
             <button onClick={() => setFilter("Tous")} className={filter === "Tous" ? "active" : ""}>Tous </button>
             <div className="separator">|</div>
-            <button onClick={() => setFilter("Premium")} className={filter === "Premium" ? "active" : ""}>Premium</button>
-            <div className="separator">|</div>
             <button onClick={() => setFilter("Standard")} className={filter === "Standard" ? "active" : ""}>Standard</button>
+            <div className="separator">|</div>
+            <button onClick={() => setFilter("Premium")} className={filter === "Premium" ? "active" : ""}>Premium&nbsp;<img src={couronne} alt='Premium'></img></button>
+            
           </div>
         </div>
 

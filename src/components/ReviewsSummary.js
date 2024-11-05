@@ -6,7 +6,7 @@ import maltText from "../images/malt-text.png"
 
 const ReviewsSummary = () => {
     return (
-        <div className="reviews-summary">
+        <div id='reviews-summary' className="reviews-summary">
             <div className='reviews-container'>
                 <div className="review-item">
                     <span className="stars">
@@ -39,7 +39,7 @@ const ReviewsSummary = () => {
                 <div className="review-item">
                     <p className="business-summary">
                         
-                        + de 500 sites créés&nbsp;<FontAwesomeIcon icon={faGlobe} className="icon-globe" />
+                        + de 500 sites créés depuis 2013&nbsp;<FontAwesomeIcon icon={faGlobe} className="icon-globe" />
                     </p>
                 </div>
             </div>

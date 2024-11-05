@@ -12,6 +12,7 @@ import Hausse from '../components/Hausse';
 import Last from '../components/Last';
 import Team from '../components/Team';
 import Footer from '../components/Footer';
+import { FilterProvider } from '../components/FilterContext';
 
 
 const Sitezy = () => {
@@ -29,9 +30,15 @@ const Sitezy = () => {
 
         <ProgressBarSection />
 
-        <CarouselPremium />
+        <FilterProvider>
 
-        <Pricing />
+          <CarouselPremium />
+
+          <Pricing />
+
+        </FilterProvider>
+
+        
 
         <Testimonials />
 

@@ -127,7 +127,7 @@ const Testimonials = () => {
     }, []);
 
     return (
-        <section className='testimonials'>
+        <section id='testimonials' className='testimonials'>
             <div className='testimonials-title'>
                 <p>EXCELLENT</p>
                 <div className='stars-container-top'>

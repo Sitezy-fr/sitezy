@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700;800;900&display=swap');
 
+* {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    text-wrap: balance;
+    padding: 0;
+    margin: 0;
+}
 
 #sitezy {
     background: url(./images/bg-blue-desktop.png);
     background-position: top left;
     background-size: cover;
-    font-family: 'Poppins', sans-serif;
-    text-wrap: balance;
-    padding: 0;
-    margin: 0;
 
     /* NAVBAR SECTION */
     .navbar {
@@ -44,30 +47,33 @@
             margin-bottom: 0;
 
             li {
-                a {
+                display: flex;
+                button {
                     text-decoration: none;
                     color: #fff; // Couleur du texte
+                    background-color: transparent;
+                    border: none;
                     font-size: 16px;
                     font-weight: 500;
                     transition: color 0.3s ease;
                     filter: drop-shadow(1px 1px #5271ff);
                     position: relative;
                 }
-                a::before {
+                button::before {
                     content: '';
                     position: absolute;
                     width: 100%;
                     height: 1px;
                     border-radius: 4px;
                     background-color: white;
-                    bottom: -5px;
+                    bottom: 7px;
                     left: 0;
                     transform-origin: right;
                     transform: scaleX(0);
                     transition: transform .3s ease-in-out;
                 }
                   
-                a:hover::before {
+                button:hover::before {
                     transform-origin: left;
                     transform: scaleX(1);
                 }
@@ -709,12 +715,21 @@
             background-color: transparent;
             color: white;
             border: none;
-            width: 100px;
+            width: 110px;
             margin: 0 10px; /* Ajoute un espacement horizontal entre les boutons */
             cursor: pointer; /* Change le curseur pour indiquer que ce sont des boutons cliquables */
             padding: 10px 0; /* Ajoute du padding pour une meilleure apparence */
             overflow: hidden; /* Assure que rien ne déborde du bouton */
             opacity: 0.75;
+            overflow: visible;
+            img {
+                width: 22px;
+                height: 22px;
+                position: absolute;
+                bottom: 12px;
+                filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.35));
+                opacity: 1;
+            }
         }
         button.active {
             opacity: 1;
@@ -724,7 +739,7 @@
         button.active::after {
             content: '';
             position: absolute;
-            left: 10%;
+            left: 9%;
             bottom: 5px; /* Positionne la bordure en bas du bouton */
             width: 80%;
             height: 1px; /* Épaisseur de la bordure */
@@ -838,6 +853,15 @@
         bottom: 10px;
         opacity: 1;
         transform: scale(1.2);
+        img {
+            width: 22px;
+                height: 22px;
+                position: absolute;
+                right: -10px;
+                bottom: 14px;
+                filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.35));
+                opacity: 1;
+        }
     }
 
     #design .carousel-buttons {
@@ -1087,13 +1111,12 @@
         position: relative;
     }
     #pricing .grid .premium .title img {
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        right: 10px;
-        bottom: 20px;
+        width: 37px;
+        height: 37px;
+        position: relative;
+        right: -5px;
+        bottom: 5px;
         filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.35));
-        transform: rotate(30deg);
     }
     #pricing .grid .premium .price {
         color: #000;
@@ -1697,18 +1720,25 @@
           .carousel-track {
             display: flex;
             overflow: hidden;
-            width: 100%;
             max-width: 1200px;
             justify-content: center;
+            padding: 0 30px;
       
             .team-card {
               text-align: center;
-              padding: 10px;
-              box-sizing: border-box;
-              transition: transform 0.3s ease;
-              background-color: #fff;
+              padding: 20px;
+              box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
               margin: 0 10px;
+              background: radial-gradient(
+              ellipse at top left, 
+                        rgba(255, 255, 255, 0.3) 20%, // Couleur plus foncée au centre, légèrement plus large
+                        rgba(255, 255, 255, 0.15) 70%, // Transition de couleur au milieu
+                        rgba(255, 255, 255, 0.1) 100% // Couleur plus claire sur les bords
+              );
+              backdrop-filter: blur(40px); // Effet de flou
+              -webkit-backdrop-filter: blur(40px); // Pour compatibilité Safari
               border-radius: 31px;
+              border: 1px solid rgba(255, 255, 255, 0.3); // Bordure translucide
               width: 330px;
               height: 330px;
               
@@ -1724,24 +1754,23 @@
               .team-info {
                 .team-name {
                   font-size: 1.5rem;
-                  color: #333;
+                  color: #fff;
                 }
       
                 .team-position {
                   font-size: 1rem;
-                  color: #777;
+                  color: rgba(255, 255, 255, 0.75);
                   margin-top: 5px;
                 }
       
                 .team-description {
                   font-size: 0.9rem;
-                  color: #555;
+                  color: #fff;
                   margin-top: 10px;
                 }
               }
             }
           }
-      
           .carousel-button {
             background: none;
             border: none;
@@ -1754,9 +1783,13 @@
             &:hover {
               color: #fff;
             }
-      
-            
           }
+        }
+    }
+    /* TEAM RESPONSIVE */
+    @media (max-width:500px){
+        .team-section .carousel .carousel-track {
+            padding: 0;
         }
     }
       

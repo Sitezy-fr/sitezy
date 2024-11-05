@@ -9,13 +9,13 @@ import maeva from "../images/Maeva.jpg";
 
 const Team = () => {
   const teamMembers = [
-    { id: 1, name: "Florian", position: "Directeur général", image: florian, description: "#toutestpossible, #lovestratégie, #geek, #motard" },
-    { id: 2, name: "Erwan", position: "Chef de projet", image: erwan, description: "#fautquonteste, #onpeutfaireça?, #lapêche?, #lamer<3" },
-    { id: 3, name: "Benjamin", position: "Architecte IT", image: benjamin, description: "#toutestcarré, #imbatman, #athlete, #mentaldacier, #geek, #vivelamontagne" },
-    { id: 4, name: "Maeva", position: "Webdesigner & Graphiste", image: maeva, description: "#lartestpartout, #challengeaccepted, #jungle, #elleestouNess?" },
-    { id: 5, name: "Manon", position: "Chargé de projet digital", image: manon, description: "#okgo, #cestdejafait, #timidemaisleader, #discretemaisefficace" },
-    { id: 6, name: "Mathis", position: "Developpeur junior", image: mathis, description: "#jadorelecode, #lovejavascript, #basecremeourien, #japon" },
-    { id: 7, name: "Ness", position: "Égérie Sitezy", image: ness, description: "#jesuisuneprincesse, #etjelesais, #sheldon, #monsieurporc" },
+    { id: 1, name: "Florian", position: "Directeur général", image: florian, description: "#toutestpossible #lovestratégie #geek #motard" },
+    { id: 2, name: "Erwan", position: "Chef de projet", image: erwan, description: "#fautquonteste #onpeutfaireça? #lapêche? #lamer<3" },
+    { id: 3, name: "Benjamin", position: "Architecte IT", image: benjamin, description: "#toutestcarré #imbatman #athlete #mentaldacier #geek #vivelamontagne" },
+    { id: 4, name: "Maeva", position: "Webdesigner & Graphiste", image: maeva, description: "#lartestpartout #challengeaccepted #jungle #elleestouNess?" },
+    { id: 5, name: "Manon", position: "Chargé de projet digital", image: manon, description: "#okgo #cestdejafait #timidemaisleader #discretemaisefficace" },
+    { id: 6, name: "Mathis", position: "Developpeur junior", image: mathis, description: "#jadorelecode #lovejavascript #basecremeourien #japon" },
+    { id: 7, name: "Ness", position: "Égérie Sitezy", image: ness, description: "#jesuisuneprincesse #etjelesais #sheldon #monsieurporc" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -59,7 +59,7 @@ const Team = () => {
   return (
     <section className="team-section">
         <div className="details">
-            <h2 className="team-title">Notre équipe</h2>
+            <h2 className="team-title">La Sitezy's team</h2>
             <p className="team-subtitle">Découvrez notre équipe à taille humaine, composée de spécialistes passionnés, agiles et performants</p>
         </div>
       <div className="carousel">
