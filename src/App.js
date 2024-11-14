@@ -10,6 +10,7 @@ import Premium5 from './pages/demo/premium-5/Premium-5';
 import Standard1 from './pages/demo/standard-1/Standard-1';
 import Standard2 from './pages/demo/standard-2/Standard-2';
 import Standard5 from './pages/demo/standard-5/Standard-5';
+import SuccessPage from './pages/SuccessPage';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 
@@ -43,6 +44,7 @@ const Main = () => {
         <Route path="/demo/standard-1" element={<Standard1 />} />
         <Route path="/demo/standard-2" element={<Standard2 />} />
         <Route path="/demo/standard-5" element={<Standard5 />} />
+        <Route path="/success" element={<SuccessPage />} />
       </Routes>
     </Router>
   );

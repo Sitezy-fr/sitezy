@@ -38,8 +38,6 @@ const Sitezy = () => {
 
         </FilterProvider>
 
-        
-
         <Testimonials />
 
         <Hausse />
