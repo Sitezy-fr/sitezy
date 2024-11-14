@@ -1,14 +1,14 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faEye } from '@fortawesome/free-solid-svg-icons';
-import lastDesign from '../images/premium-4.png'
+import lastDesign from '../images/premium-4.png';
 
 const Last = () => {
   const design = {
     id: 1,
     image: lastDesign,
-    demoLink: "#",
-    reserveLink: "#",
+    demoLink: "/#/demo/premium-4", // Lien pour la démo
+    reserveLink: "https://book.stripe.com/bIY2aL8e8bPQ1z2cMM", // Lien pour la réservation
   };
 
   return (
@@ -16,11 +16,12 @@ const Last = () => {
       <div className="last-section">
         <div className="details">
           <h2 className="last-title">Notre dernier design&nbsp;🔥</h2>
-          <p className="last-subtitle">Voici notre dernière création, réservez rapidement ce design avant qu'il ne soit plus disponible !</p>
+          <p className="last-subtitle">
+            Voici notre dernière création, réservez rapidement ce design avant qu'il ne soit plus disponible !
+          </p>
         </div>
 
         <div className="last-item">
-
           <div className="design-image">
             <img src={design.image} alt={`Design ${design.id}`} />
           </div>
