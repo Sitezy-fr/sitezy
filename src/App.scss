@@ -1792,6 +1792,7 @@
             padding: 0;
         }
     }
+    
     /* SUCCESS PAGE */
     .success {
         background-color: #f9f9f9;
@@ -1855,7 +1856,7 @@
           p {
             font-size: 1rem;
             color: black;
-            margin: 30px auto;
+            margin: 5px auto;
             text-align: left;
           }
       
@@ -1872,6 +1873,18 @@
               background: #276c3a;
             }
           }
+        }
+    }
+    /* SUCESS RESPONSIVE */
+    @media (max-width:500px){
+        .success-page .success-container  {
+            padding: 40px 20px;
+            h1 {
+                font-size: 33px;
+            }
+            .success-title .icons {
+                font-size: 33px;
+            }
         }
     }
       
