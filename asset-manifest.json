@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.00ab5402.css",
+    "main.css": "/static/css/main.2c9156b0.css",
     "main.js": "/static/js/main.9b14acd6.js",
     "static/js/453.a4afd10d.chunk.js": "/static/js/453.a4afd10d.chunk.js",
     "static/media/back.png": "/static/media/back.3cdf66ac1a5ad81912e5.png",
@@ -20,7 +20,7 @@
     "static/media/white-marbre.png": "/static/media/white-marbre.7541f084d579625596e4.png",
     "static/media/dx-indiv.jpg": "/static/media/dx-indiv.946c36da56a5cbb85fd6.jpg",
     "static/media/bg-blue-desktop.png": "/static/media/bg-blue-desktop.72e90017d5a6922810ff.png",
-    "static/media/bg-blue-mobile.png": "/static/media/bg-blue-mobile.96bca1d2051a5dc47aa2.png",
+    "static/media/bg-blue-mobile-2.png": "/static/media/bg-blue-mobile-2.b1dc2b66bead4028614b.png",
     "static/media/home.png": "/static/media/home.b147c850fa5cac8eb997.png",
     "static/media/sitezy7.mp4": "/static/media/sitezy7.18b696d62fcef6b7ffd6.mp4",
     "static/media/dx-reviews.jpg": "/static/media/dx-reviews.4d16fbeefcff9335e4e9.jpg",
@@ -105,12 +105,12 @@
     "static/media/logo.webp": "/static/media/logo.2bc82793f5d7204d7424.webp",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.00ab5402.css.map": "/static/css/main.00ab5402.css.map",
+    "main.2c9156b0.css.map": "/static/css/main.2c9156b0.css.map",
     "main.9b14acd6.js.map": "/static/js/main.9b14acd6.js.map",
     "453.a4afd10d.chunk.js.map": "/static/js/453.a4afd10d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.00ab5402.css",
+    "static/css/main.2c9156b0.css",
     "static/js/main.9b14acd6.js"
   ]
 }
