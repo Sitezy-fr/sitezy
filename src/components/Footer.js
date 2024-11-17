@@ -57,7 +57,7 @@ const Footer = () => {
     event.preventDefault();
     
     // Envoi du formulaire avec EmailJS
-    emailjs.sendForm('service_1geehsc', 'template_7y8gj7e', event.target, 'O1o3uROTAJ1wVIkvw')
+    emailjs.sendForm('service_n7tz8qw', 'template_h0k80na', event.target, 'PsRrT8-QcQt4j-krc')
       .then((result) => {
           // Afficher une alerte de succès avec SweetAlert2
           Swal.fire({
