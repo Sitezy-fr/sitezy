@@ -14,7 +14,7 @@ const testimonials = [
         name: "Juste Moi",
         date: "Le 14 Septembre 2024",
         stars: "★★★★★",
-        comment: "Fabien et son équipe gère notre SEO, très bon résultats et très bonne communication je recommande"
+        comment: "Sitezy gère notre SEO, très bon résultats et très bonne communication je recommande"
     },
     {
         logo: googleLogo,
@@ -22,15 +22,7 @@ const testimonials = [
         name: "Yohann Peton (Yohann)",
         date: "Le 10 Août 2024",
         stars: "★★★★★",
-        comment: "Merci à Seb pour ce service incroyablement rapide. À partir de maintenant je passe par vous pour mon site."
-    },
-    {
-        logo: googleLogo,
-        photo: vert,
-        name: "Emma Pourcel",
-        date: "Le 14 Septembre 2024",
-        stars: "★★★★★",
-        comment: "J'ai réalisé une immersion professionnelle d'une semaine chez Sitezy. C'était une expérience géniale. Fabien est très professionnel, passionné par ce qu'il fait, dynamique, arrangeant et généreux! Merci encore !!"
+        comment: "Merci pour ce service incroyablement rapide. À partir de maintenant je passe par vous pour mon site."
     },
     {
         logo: googleLogo,
@@ -38,7 +30,7 @@ const testimonials = [
         name: "Corneliu VAROSO",
         date: "Le 10 Août 2024",
         stars: "★★★★★",
-        comment: "L'équipe est au top, toujours là a rendre service. Merci pour tous ces conseils marketing et les avancées web fait sur mon site. Je recommande."
+        comment: "Merci pour tous ces conseils marketing et les avancées web fait sur mon site. Je recommande."
     },
     {
         logo: googleLogo,

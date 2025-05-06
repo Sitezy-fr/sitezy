@@ -44,7 +44,7 @@ const Sitezy = () => {
 
         <Last />
         
-        <Team />
+        {/* <Team /> */}
 
         <Footer />
 

@@ -186,7 +186,7 @@ const Footer = () => {
 
       {/* <a href='#' style={styles.link}>Mentions légales</a> */}
       <p style={styles.text}>
-        &copy; 2013-{currentYear} Sitezy - Tous droits réservés.
+        &copy; 2022-{currentYear} Sitezy - Tous droits réservés.
       </p>
       
     </footer>

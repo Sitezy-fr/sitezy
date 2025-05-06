@@ -51,7 +51,7 @@ const Header = () => {
             <div className="header__content">
                 <div className="header__text">
                     <div className="tag">
-                        Coachs sportifs uniquement
+                        Indépendants uniquement
                     </div>
                     <h1>
                         <strong>Votre site web <br /> en toute <span className="hand-drawn">simplicité</span></strong>
