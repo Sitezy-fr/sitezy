@@ -3,6 +3,7 @@ import mockupVideo from '../images/sitezy7.mp4';
 import mockupImage from '../images/mockup-mobile.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import HeroAnimation from './HeroAnimation';
 
 const Header = () => {
     const videoRef = useRef(null);
@@ -61,22 +62,7 @@ const Header = () => {
                     <p><FontAwesomeIcon icon={faCircleCheck} />&nbsp; Un tarif <u>vraiment</u> adapté aux indépendants</p>
                 </div>
                 <div className="header__image">
-                    {isDesktop ? (
-                        <video 
-                            ref={videoRef}
-                            autoPlay 
-                            muted 
-                            loop 
-                            playsInline 
-                            src={mockupVideo} 
-                            alt="Mockup de réalisation sur iMac" 
-                        />
-                    ) : (
-                        <img 
-                            src={mockupImage} 
-                            alt="Mockup de réalisation sur mobile" 
-                        />
-                    )}
+                    <HeroAnimation />
                 </div>
             </div>
             <div className="header__chevron" onClick={scrollToPresentation} style={{ cursor: 'pointer' }}>

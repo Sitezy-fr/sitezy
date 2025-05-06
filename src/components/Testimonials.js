@@ -14,15 +14,15 @@ const testimonials = [
         name: "Juste Moi",
         date: "Le 14 Septembre 2024",
         stars: "★★★★★",
-        comment: "Jonathan et son équipe gère notre SEO, très bon résultats et très bonne communication je recommande"
+        comment: "Fabien et son équipe gère notre SEO, très bon résultats et très bonne communication je recommande"
     },
     {
         logo: googleLogo,
         photo: marron,
-        name: "Yohann Pejon (Yohann)",
+        name: "Yohann Peton (Yohann)",
         date: "Le 10 Août 2024",
         stars: "★★★★★",
-        comment: "Merci à Jonathan pour ce service incroyablement rapide. À partir de maintenant je passe par vous pour mon site."
+        comment: "Merci à Seb pour ce service incroyablement rapide. À partir de maintenant je passe par vous pour mon site."
     },
     {
         logo: googleLogo,
@@ -30,12 +30,12 @@ const testimonials = [
         name: "Emma Pourcel",
         date: "Le 14 Septembre 2024",
         stars: "★★★★★",
-        comment: "J'ai réalisé une immersion professionnelle d'une semaine chez Simplement. C'était une expérience géniale. Jonathan est très professionnel, passionné par ce qu'il fait, dynamique, arrangeant et généreux! Merci encore !!"
+        comment: "J'ai réalisé une immersion professionnelle d'une semaine chez Sitezy. C'était une expérience géniale. Fabien est très professionnel, passionné par ce qu'il fait, dynamique, arrangeant et généreux! Merci encore !!"
     },
     {
         logo: googleLogo,
         photo: marron,
-        name: "Corneliu VOROSAN",
+        name: "Corneliu VAROSO",
         date: "Le 10 Août 2024",
         stars: "★★★★★",
         comment: "L'équipe est au top, toujours là a rendre service. Merci pour tous ces conseils marketing et les avancées web fait sur mon site. Je recommande."
@@ -51,7 +51,7 @@ const testimonials = [
     {
         logo: googleLogo,
         photo: vert,
-        name: "Micro Crèche ZICRECHE",
+        name: "Micro Crèche TITCRECHE",
         date: "Le 14 Septembre 2024",
         stars: "★★★★★",
         comment: "Un excellent travail! Nous avons fait appel à leur service pour améliorer notre site internet, nous sommes entièrement satisfait du résultat. Je recommande leur service"
@@ -59,15 +59,15 @@ const testimonials = [
     {
         logo: googleLogo,
         photo: marron,
-        name: "IRH By ACT-ON GROUP",
+        name: "IRH By GROUPACTION",
         date: "Le 10 Août 2024",
         stars: "★★★★★",
-        comment: "Nous avons fait appel à l'agence Simplement pour la création de 2 sites internet et nous sommes très satisfaits du résultat ! Équipe au top, réactive, flexible et à l'écoute. Un vrai bonheur de travailler avec cette agence ! Les tarifs proposés sont plus que compétitifs et le service après-vente est parfait !"
+        comment: "Nous avons fait appel à l'agence Sitezy pour la création de 2 sites internet et nous sommes très satisfaits du résultat ! Équipe au top, réactive, flexible et à l'écoute. Un vrai bonheur de travailler avec cette agence ! Les tarifs proposés sont plus que compétitifs et le service après-vente est parfait !"
     },
     {
         logo: googleLogo,
         photo: vert,
-        name: "Patoche",
+        name: "Pascal",
         date: "Le 14 Septembre 2024",
         stars: "★★★★★",
         comment: "Service impeccable, très satisfait du résultat final. Je recommande vivement !"
@@ -166,9 +166,13 @@ const Testimonials = () => {
                                 <div className='stars'></div>
                                 <div className='stars'></div>
                                 <div className="verified">
-                                    <div className={`tooltip ${tooltipVisible ? 'initial' : ''}`}>
-                                        TrustIndex vérifie que la source originale de l'avis est Google.
-                                    </div>
+                                <div className={`tooltip ${tooltipVisible ? 'initial' : ''}`}>
+                                    <a href="https://www.trustindex.io" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>
+                                        TrustIndex
+                                    </a>{" "}
+                                    vérifie que la source originale de l'avis est Google.
+                                </div>
+
                                 </div>
                             </div>
                             <div className='comment-container'>

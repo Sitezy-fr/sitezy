@@ -184,7 +184,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <a href='#' style={styles.link}>Mentions légales</a>
+      {/* <a href='#' style={styles.link}>Mentions légales</a> */}
       <p style={styles.text}>
         &copy; 2013-{currentYear} Sitezy - Tous droits réservés.
       </p>

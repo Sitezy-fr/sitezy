@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from "react";
-import manon from "../images/Manon.jpg";
-import mathis from "../images/Mathis.jpg";
-import ness from "../images/Ness.jpg";
-import florian from "../images/Florian.jpg";
-import erwan from "../images/Erwan.jpg";
-import benjamin from "../images/Benjamin.jpg";
-import maeva from "../images/Maeva.jpg";
+import emilie from "../images/Emilie.jpg";
+import seb from "../images/Seb.jpg";
+import tess from "../images/Tess.jpg";
+import antoine from "../images/Antoine.jpg";
+import fabien from "../images/Fabien.jpg";
+import guillaume from "../images/Guillaume.jpg";
+import victoria from "../images/Victoria.jpg";
 
 const Team = () => {
   const teamMembers = [
-    { id: 1, name: "Florian", position: "Directeur général", image: florian, description: "#toutestpossible #lovestratégie #geek #motard" },
-    { id: 2, name: "Erwan", position: "Chef de projet", image: erwan, description: "#fautquonteste #onpeutfaireça? #lapêche? #lamer<3" },
-    { id: 3, name: "Benjamin", position: "Architecte IT", image: benjamin, description: "#toutestcarré #imbatman #athlete #mentaldacier #geek #vivelamontagne" },
-    { id: 4, name: "Maeva", position: "Webdesigner & Graphiste", image: maeva, description: "#lartestpartout #challengeaccepted #jungle #elleestouNess?" },
-    { id: 5, name: "Manon", position: "Chargé de projet digital", image: manon, description: "#okgo #cestdejafait #timidemaisleader #discretemaisefficace" },
-    { id: 6, name: "Mathis", position: "Developpeur junior", image: mathis, description: "#jadorelecode #lovejavascript #basecremeourien #japon" },
-    { id: 7, name: "Ness", position: "Égérie Sitezy", image: ness, description: "#jesuisuneprincesse #etjelesais #sheldon #monsieurporc" },
+    { id: 1, name: "Antoine", position: "Directeur général", image: antoine, description: "#toutestpossible #lovestratégie #geek #motard" },
+    { id: 2, name: "Fabien", position: "Chef de projet", image: fabien, description: "#fautquonteste #onpeutfaireça? #lapêche? #lamer<3" },
+    { id: 3, name: "Guillaume", position: "Architecte IT", image: guillaume, description: "#toutestcarré #imbatman #athlete #mentaldacier #geek #vivelamontagne" },
+    { id: 4, name: "Victoria", position: "Webdesigner & Graphiste", image: victoria, description: "#lartestpartout #challengeaccepted #jungle #elleestouTess?" },
+    { id: 5, name: "Émilie", position: "Chargé de projet digital", image: emilie, description: "#okgo #cestdejafait #timidemaisleader #discretemaisefficace" },
+    { id: 6, name: "Seb", position: "Developpeur junior", image: seb, description: "#jadorelecode #lovejavascript #basecremeourien #japon" },
+    { id: 7, name: "Tess", position: "Égérie Sitezy", image: tess, description: "#jesuisuneprincesse #etjelesais #sheldon #monsieurporc" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

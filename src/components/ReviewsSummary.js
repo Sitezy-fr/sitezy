@@ -18,7 +18,7 @@ const ReviewsSummary = () => {
                     </span>
                     <span className="score">4.9/5</span>
                     <p>
-                        4.9 | 155 avis sur 
+                        4.9 | 125 avis sur 
                         <img src={googleText} alt="Logo Google" className="logo-reviews" />
                     </p>
                 </div>
@@ -39,7 +39,7 @@ const ReviewsSummary = () => {
                 <div className="review-item">
                     <p className="business-summary">
                         
-                        + de 500 sites créés depuis 2013&nbsp;<FontAwesomeIcon icon={faGlobe} className="icon-globe" />
+                        + de 300 sites créés depuis 2013&nbsp;<FontAwesomeIcon icon={faGlobe} className="icon-globe" />
                     </p>
                 </div>
             </div>
