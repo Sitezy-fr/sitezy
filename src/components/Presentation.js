@@ -45,7 +45,7 @@ const Presentation = () => {
             
             <div class="details">
             <h2>Un processus qui fonctionne</h2>
-            <p>Découvrez pourquoi nous sommes l'agence&nbsp;n°1 dans la création de site pour coach sportif</p>
+            <p>Découvrez pourquoi nous sommes l'agence&nbsp;n°1 dans la création de site pour indépendants</p>
           </div>
             <div className="presentation__cards">
                 {cards.map((card, index) => (

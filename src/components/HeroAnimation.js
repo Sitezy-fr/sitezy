@@ -1,6 +1,6 @@
 import React from 'react';
 import Lottie from 'lottie-react';
-import animationData from '../assets/Hero.json'; // Chemin vers ton fichier JSON
+import animationData from '../assets/Hero-opti.json'; // Chemin vers ton fichier JSON
 
 
 const HeroAnimation = () => {
